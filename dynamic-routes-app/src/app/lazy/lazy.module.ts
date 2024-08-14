@@ -11,14 +11,14 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LazyRoutingModule {
+export class LazyModule {
   constructor(private router: Router) {
     this.addDynamicRoutes();
   }
 
   private addDynamicRoutes() {
     const additionalRoutes: Routes = [
-      { path: 'dynamic', component: DynamicComponent }, // Example of an additional route
+      { path: 'dynamic', component: DynamicComponent },
     ];
     this.router.config.push(...additionalRoutes);
   }

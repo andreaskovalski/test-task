@@ -4,6 +4,6 @@ export const routes: Routes = [
   { path: '', redirectTo: 'lazy', pathMatch: 'full' },
   {
     path: 'lazy',
-    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyRoutingModule)
+    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule)
   },
 ];
